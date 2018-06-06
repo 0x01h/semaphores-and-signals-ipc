@@ -174,14 +174,14 @@ int main(int argc, char const *argv[]) {
   }
 
     sem_destroy(machineBusy); // Release and delete semaphores.
-    sem_destroy(fillingCheck); // Release and delete semaphores.
+    sem_destroy(fillingCheck);
     free(coffeeType); // Release memory resources.
     munmap(W, sizeof(W)); // Release shared memory resources.
-    munmap(coffeeNumber, sizeof(coffeeNumber)); // Release shared memory resources.
-    munmap(fillingComplete, sizeof(fillingComplete)); // Release shared memory resources.
-    munmap(isFinished, sizeof(isFinished)); // Release shared memory resources.
-    munmap(employees, sizeof(employees)); // Release shared memory resources.
-    munmap(emp, sizeof(emp)); // Release shared memory resources.
+    munmap(coffeeNumber, sizeof(coffeeNumber));
+    munmap(fillingComplete, sizeof(fillingComplete));
+    munmap(isFinished, sizeof(isFinished));
+    munmap(employees, sizeof(employees));
+    munmap(emp, sizeof(emp));
 
     return EXIT_SUCCESS;
 }
